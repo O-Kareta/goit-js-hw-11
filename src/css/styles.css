@@ -82,6 +82,10 @@ a {
   border-bottom-right-radius: 0px;
 }
 
+.submit-btn:hover {
+ background-color: #b0b0b0;
+}
+
 .search-svg {
   fill: #555555;
 }

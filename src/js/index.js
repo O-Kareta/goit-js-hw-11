@@ -1,8 +1,8 @@
 import Notiflix from 'notiflix';
-import createCard from '/src/templates/card.js';
+import createCard from '../templates/card.hbs';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import ImagesApiServise from '/src/js/api-s';
+import ImagesApiServise from '../js/api-s';
 
 const formEl = document.querySelector('#search-form');
 const formInput = document.querySelector('.main-input');
@@ -29,10 +29,7 @@ function onSearch(e) {
       'Sorry, there are no images matching your search query. Please try again'
     );
   }
-  // ImagesApi.resetPage();
-  // clearMarkup();
-  // ImagesApi.fetchArticles().then(createMarkup);
-  // unDisableBtn();
+
   createGallery();
 }
 
@@ -54,8 +51,6 @@ async function createGallery() {
 
     Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
 
-    // ImagesApi.fetchArticles().then(createMarkup);
-
     unDisableBtn();
   } catch (error) {
     console.log(error);
@@ -74,8 +69,6 @@ function createMarkup(data) {
 }
 
 async function onLoadMore() {
-  // ImagesApi.fetchArticles().then(createMarkup);
-
   try {
     const data = await ImagesApi.fetchArticles();
 
