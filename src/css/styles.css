@@ -63,7 +63,7 @@ a {
   border-right: none;
   border-radius: 3px;
   border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .main-input::placeholder {
@@ -79,7 +79,7 @@ a {
   border-left: none;
   border-radius: 3px;
   border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .submit-btn:hover {
